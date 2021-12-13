@@ -1,14 +1,23 @@
-/// <reference types="Cypress" />
-import { Given,When,Then, And } from "cypress-cucumber-preprocessor/steps"; 
+//import pkg from 'cypress-cucumber-preprocessor';
+//const { Given, When, Then } = pkg;
+//// <reference types="Cypress" />
 
-Given("the user visits Inshur Test Website", function(){ 
-    cy.visit("http://localhost:3000").contains("Cypress Test");
-})
+var{Given,When,Then}=import('cypress-cucumber-preprocessor');
 
-When("they click the last user",()=>{
-    cy.get("[data-test='3']").click();
-})
+Given('the user visits Inshur Test Website', function () {
+    // Write code here that turns the phrase above into concrete actions
+    return console.log("Given block");
+});
 
-Then("assert",()=>{
-    cy.contains("Buys Lots of Products in general");
-})
+
+When('they click the last user', function () {
+    // Write code here that turns the phrase above into concrete actions
+    return console.log("When block");
+});
+
+
+Then('assert', function () {
+    // Write code here that turns the phrase above into concrete actions
+    return console.log("Then block");
+});
+
